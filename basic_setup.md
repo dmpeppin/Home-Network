@@ -42,6 +42,19 @@
 
 
 
+#### docker compose: pihole ###
+
+- run attached the first time to obtain the password
+- set upstream dns to ** 1.1.1.1 **
+- dont worry about local dns for now
+- not sure what dns setting in docker compose are for...
+
+
+
+
+
+
+
 
 #### docker compose: unifi ####
 
