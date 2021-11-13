@@ -33,6 +33,12 @@
 
 `pip install docker-compose`
 
+/home/lunar/configs/*
+
+/home/lunar/docker-compose/*/dockercompose.yaml
+
+
+
 
 
 
