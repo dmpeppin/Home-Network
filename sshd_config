@@ -1,0 +1,13 @@
+### sshd_config
+### 
+###
+### restrict to user daniel
+###
+### password authentication open (for now)
+
+Port 22
+PermitRootLogin no
+Subsystem sftp  /usr/lib/openssh/sftp-server
+
+
+PasswordAuthentication yes
