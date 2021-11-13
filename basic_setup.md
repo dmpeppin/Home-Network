@@ -37,6 +37,16 @@
 
 
 
+#### docker compose: unifi ####
+
+watch for ports to open, they are slow, can watch with nmap for them to open
+
+attach with `<ip>:8080`
+
+when adopting, make sure to put <ip> into controller/controller host IP (no port), check box for override inform host with controller IP
+
+restart docker  
+  
 
 1) add ssh config
 2) ufw
