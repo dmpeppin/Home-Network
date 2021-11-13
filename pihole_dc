@@ -12,13 +12,13 @@ services:
       - "443:443/tcp"
     environment:
       TZ: 'America/Chicago'
-      ServerIP: 192.168.1.55  #replace with device IP
+      ServerIP: 10.0.10.10  #replace with device IP
     volumes:
       - '/home/lunar/configs/pihole/etc-pihole/:/etc/pihole/'
       - '/home/lunar/configs/pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/'
     dns:
       - 127.0.0.1
-      - 192.168.1.1
+      - 1.1.1.1
     cap_add:
       - NET_ADMIN
     restart: unless-stopped
