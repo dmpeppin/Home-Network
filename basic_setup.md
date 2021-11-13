@@ -50,7 +50,16 @@
 - not sure what dns setting in docker compose are for...
 
 
-
+1) factory reset devices
+2) load unifi controller onto machine
+3) adopt devices
+4) set ssh password
+5) ssh into all devices
+6) create new VLAN for controller machine
+7) activate new VLAN on port for controller machine
+8) log into controller after new VLAN and IP are applied
+9) check "override inform" ???
+10) use `set-inform http://10.0.10.10:8080/inform` on all devices to set new controller location
 
 
 
