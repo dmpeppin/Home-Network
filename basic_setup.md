@@ -62,6 +62,16 @@
 10) use `set-inform http://10.0.10.10:8080/inform` on all devices to set new controller location
 
 
+# Reduce card writes #
+
+add to `./etc-pihole/pihole-FTL.conf`
+
+```
+# Items older than x days will be deleted from log
+MAXDBDAYS=30
+# Write to DB every x minutes
+DBINTERVAL=720`
+```
 
 
 
