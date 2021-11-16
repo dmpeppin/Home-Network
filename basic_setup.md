@@ -1,23 +1,24 @@
 
 ### very first steps ###
 
-`adduser daniel` - create user
+`adduser daniel`
 
-`usermod -aG sudo daniel` - add user to sudo group (for sudo priveledges) 
+`usermod -aG sudo daniel`
 
-`deluser pi` - remove the default user
+`deluser pi`
 
-`systemctl enable ssh` enable ssh for startup
+`systemctl enable ssh`
 
-`nano /etc/sysctl.conf` add `vm.swappiness = 10` add bottom
+`nano /etc/sysctl.conf` add `vm.swappiness = 10` to bottom, reduces swap usage
+
+`apt install lm-sensors` - temperature monitor
+
+1) add ssh config
+2) ufw
+3) 
 
 
 
-### some more apps to install ###
-
-`apt install aptitude`
-
-`apt install lm-sensors`
 
 #### docker ####
 
@@ -25,11 +26,11 @@
 
 `sh get-docker.sh`
 
-`adduser lunar` - create non sudo user
+`adduser lunar` - create non sudo user  to run docker
 
 `usermod -aG docker lunar`
 
-`apt install python3 python3-pip`
+`apt install python3 python3-pip` - python repository for docker compose
 
 `pip install docker-compose`
 
@@ -37,32 +38,33 @@
 
 /home/lunar/docker-compose/*/dockercompose.yaml
 
+`docker-compose up -d` `docker-compose down`
 
 
 
 
-
-#### docker compose: pihole ###
+#### pihole setup ####
 
 - run attached the first time to obtain the password
 - set upstream dns to ** 1.1.1.1 **
 - dont worry about local dns for now
 - not sure what dns setting in docker compose are for...
 
+#### unifi setup ####
 
 1) factory reset devices
 2) load unifi controller onto machine
-3) adopt devices
+3) adopt devices 
 4) set ssh password
-5) ssh into all devices
-6) create new VLAN for controller machine
-7) activate new VLAN on port for controller machine
+5) ssh into all devices...
+6) create new VLAN network to be used by controller machine
+7) activate new VLAN on physical port for controller machine
 8) log into controller after new VLAN and IP are applied
 9) check "override inform" ???
-10) use `set-inform http://10.0.10.10:8080/inform` on all devices to set new controller location
+10) ssh `set-inform http://10.0.10.10:8080/inform` on all devices to set new controller location
 
 
-# Reduce card writes #
+### Reduce card writes ###
 
 add to `./etc-pihole/pihole-FTL.conf`
 
@@ -74,17 +76,6 @@ DBINTERVAL=720`
 ```
 
 
-
-#### docker compose: unifi ####
-
-watch for ports to open, they are slow, can watch with nmap for them to open
-
-attach with `<ip>:8080`
-
-when adopting, make sure to put <ip> into controller/controller host IP (no port), check box for override inform host with controller IP
-
-restart docker  
-  
 
 1) add ssh config
 2) ufw
