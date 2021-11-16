@@ -30,3 +30,9 @@ Set Maggie to "DHCP Name Server" Manual "1.1.1.1" to allow ads
 
 
 ## Firewalls ##
+
+
+
+## USG Configs ##
+
+- Set inform host to controller IP. 
