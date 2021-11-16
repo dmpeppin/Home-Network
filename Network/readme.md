@@ -36,3 +36,5 @@ Set Maggie to "DHCP Name Server" Manual "1.1.1.1" to allow ads
 ## USG Configs ##
 
 - Set inform host to controller IP. 
+- After changing controller IP, on each device, ssh in and run `set-inform http://<new ip>:8080/inform` to find new controller location
+- Set Wifi channels
